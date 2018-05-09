@@ -1,0 +1,42 @@
+  <html>
+    <head>
+         <meta charset="utf-8">
+         
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link rel="stylesheet" href="./styles.css">
+         <title>Training 1</title>
+        </head>
+
+        <body>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 content">
+                     <div class="well">
+                         <div class="row">
+                             <div class="col-sm-12 title">
+                              <h1>Find User's Record</h1>
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-sm-12 search-box">
+                            <input type="text" id="searchField" onkeyup="myAutoComplete()" onselect="displayUser()" list="name_list" placeholder="Search..">
+                            
+                            <datalist id="name_list">
+                                </datalist>
+                            </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12" id="user_info">
+                            
+                                </div>
+                                
+                            </div>
+                      </div>      
+                    </div>
+                </div>
+            </div>
+                <script src="functionality.js"></script>
+            </body>
+    </html>

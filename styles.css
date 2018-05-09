@@ -1,0 +1,35 @@
+.well{
+    width: 80%;
+    background-color:#1abc9c;
+    min-height: 200px;
+}
+.content{
+    float: none;
+    margin: 0 auto;
+    top:140px;
+}
+.title{
+    text-align: center;
+    font: 20px Montserrat, sans-serif;
+    color: white;
+    border-bottom: 2px solid #ffff;
+}
+.search-box{
+    padding:10px;
+}
+.user-record{
+    padding: 10px;
+    color: #ffff;
+    font: 15px Montserrat, sans-serif;
+    border: 1px dotted #fff;
+
+}
+
+#searchField{
+    padding: 6px;
+margin-top: 8px;
+font-size: 17px;
+border: none;
+margin-left: 28%;
+color: grey;
+}

@@ -22,7 +22,13 @@
     color: #ffff;
     font: 15px Montserrat, sans-serif;
     border: 1px dotted #fff;
+    text-align: center;
+    margin-bottom: 10px;
 
+}
+.active{
+    background:rgb(229, 247, 75);
+    color: rgb(233, 62, 204);
 }
 
 #searchField{
@@ -32,4 +38,16 @@ font-size: 17px;
 border: none;
 margin-left: 28%;
 color: grey;
+}
+.search-btn
+    {
+       
+        padding: 10px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    
 }

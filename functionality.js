@@ -1,6 +1,6 @@
 
 
-function myAutoComplete(event)
+function myAutoComplete()
 {
    
 
@@ -11,9 +11,11 @@ function myAutoComplete(event)
     var user_info = document.getElementById('user_info');
 
     
-    var inpt=event.target.value+event.key;
+    //var inpt= document.getElementById('searchField').value;;
   
-  
+  var inpt=document.getElementById('searchField').value;
+  console.log(inpt);
+ 
     
     user_info.innerHTML = "";
     var checkForWhiteSpace=inpt.replace(/ /g,'');
@@ -25,7 +27,7 @@ function myAutoComplete(event)
 
         let username="";
         let xhr=new XMLHttpRequest();
-        xhr.open("GET","https://api.github.com/users?q=username");
+        xhr.open("GET","https://api.github.com/search/users?q="+inpt);
         xhr.onload=function(){
             if(this.status>=200 && this.status<300){
   
@@ -56,21 +58,16 @@ function myAutoComplete(event)
      
      var users=JSON.parse(data);
      
+     
      user_info.innerHTML+=`<div class="row">`;
      var count=0;
      
-     for(user of users){
+     for(user of users.items){
      
 
         username=user.login;
         username=username.toUpperCase();
-       var str=inpt;
-       str=str.toUpperCase();
-     
-
       
-      
-     if(username.startsWith(str.charAt(0))){
         count++;
         var option = document.createElement('option');
         option.className="usernames";
@@ -85,12 +82,13 @@ function myAutoComplete(event)
         </div> </a>
         `;
 
-
+ }
+        
        
 
-     }
     
-    }
+    
+   
 
    
     
